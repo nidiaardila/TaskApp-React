@@ -8,8 +8,18 @@ function TaskList(){
 const [tasks, setTasks] = useState([]);
 
 const addTask = task => {
-  console.log("Tarea agregada");
+  // comprobar que el imput no este vacio
+  if(task.texto.trim()){
+    task.texto = task.texto.trim();
+    const tasksActualizadas = [task, ...tasks];
+    setTasks(tasksActualizadas);
+  }
   console.log(task);
+}
+
+const deleteTask = id => {
+  const tasksActualizadas = tasks.filter(task => task.id !== id);
+  setTasks(tasksActualizadas);
 }
 
     return(
@@ -19,8 +29,11 @@ const addTask = task => {
            {
             tasks.map((task)=>
             <Task 
+              key={task.id}
+              id={task.id}
               texto= {task.texto}
-              realizada={task.realizada}/>
+              realizada={task.realizada}
+              deleteTask={deleteTask}/>
             )
            }
           </div>

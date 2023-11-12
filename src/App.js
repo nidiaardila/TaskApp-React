@@ -2,7 +2,7 @@
 import './App.css';
 import go from './images/go.png';
 import TaskList from './components/TaskList';
-import Task from './components/Task';
+// import Task from './components/Task';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className='tareas-lista'>
           <h1>My Tasks</h1>
-          <Task texto='Aprender React'/>
+          {/* <Task texto='Aprender React'/> */}
           {/* <TaskForm /> */}
           <TaskList />
       </div>
