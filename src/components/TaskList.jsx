@@ -15,12 +15,22 @@ const addTask = task => {
     setTasks(tasksActualizadas);
   }
   console.log(task);
-}
+};
 
 const deleteTask = id => {
   const tasksActualizadas = tasks.filter(task => task.id !== id);
   setTasks(tasksActualizadas);
-}
+};
+
+const taskDone = id => {
+  const tasksActualizadas = tasks.map(task => {
+    if(task.id === id){
+      task.realizada = !task.realizada;
+    }
+    return task;
+  });
+  setTasks(tasksActualizadas);
+};
 
     return(
         <>
@@ -33,6 +43,7 @@ const deleteTask = id => {
               id={task.id}
               texto= {task.texto}
               realizada={task.realizada}
+              taskDone={taskDone}
               deleteTask={deleteTask}/>
             )
            }

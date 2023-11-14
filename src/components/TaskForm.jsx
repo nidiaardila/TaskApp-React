@@ -11,7 +11,7 @@ function TaskForm(props){
         // console.log('Escribiendo....');
         setInput(e.target.value);
         console.log(e.target.value);
-    }
+    };
 
     const envioForm = evento => {
         // para evitar volver a cargar toda la app cuando se envia el formulario
@@ -21,9 +21,9 @@ function TaskForm(props){
             id : uuidv4(),
             texto: input,
             realizada: false
-        }
+        };
         props.onSubmit(newTask);
-    }
+    };
 
     return(
         <form className='task-form'
