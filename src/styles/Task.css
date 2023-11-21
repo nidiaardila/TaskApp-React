@@ -21,14 +21,21 @@
     overflow-wrap: anywhere;
 }
 
+
 .task-icon{
     width: 25px;
     height: 25px;
     margin: 5px;
 }
 
+
 /* task realizada */
 .task-container.realizada{
-    background-color: 5a01a7;
+    background-color: #1565C0;
     text-decoration: line-through;
+}
+
+.task-container:hover {
+    
+    background-color: #2196F3;
 }

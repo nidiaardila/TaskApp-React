@@ -23,6 +23,7 @@ function TaskForm(props){
             realizada: false
         };
         props.onSubmit(newTask);
+        
     };
 
     return(

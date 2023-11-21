@@ -6,7 +6,7 @@
 }
 
 .task-input{
-    width: 350px;
+    width: 400px;
     font-size: 18px;
     background-color: white;
     padding: 14px 32px 14px 16px;
@@ -17,7 +17,7 @@
 .task-button{
     padding: 16px;
     font-size: 18px;
-    font-family: Roboto, sans-serif;
+    font-family: Monserrat, sans-serif;
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
@@ -27,3 +27,4 @@
     /* La primera letra de la palabra la convierte en mayuscula capitalize */
     text-transform: capitalize; 
 }
+
